@@ -1,0 +1,7 @@
+{
+  "version": "0.0.1",
+  "description": "auto generate lazy bundle code",
+  "author": "FPG <alan@fpi.cc>",
+  "name": "vite-plugin-auto-lazybundle",
+  "main": "lib/index.js"
+}
