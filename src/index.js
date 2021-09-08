@@ -23,9 +23,9 @@ function autoLazy(config) {
     enforce: "pre",
     transform(src, id) {
       let tmpStr = src;
-      if (id.includes(slash(path.resolve("./src/scenes")))) {
+      if (id.includes(slash(path.resolve("./src")))) {
         Object.keys(config).forEach((moduleName) => {
-          if (id.includes(`scenes/${moduleName}/index.tsx`)) {
+          if (id.includes(moduleName)) {
             for (let i = 0, l = config[moduleName].length; i < l; i += 1) {
               const lazyModuleConfig = config[moduleName][i];
 
