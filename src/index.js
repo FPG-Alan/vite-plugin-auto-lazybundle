@@ -32,7 +32,9 @@ function autoLazy(config) {
               tmpStr = tmpStr.replace(
                 `import ${lazyModuleConfig.name} from '${lazyModuleConfig.path}';`,
                 `${
-                  (i === 0 && 'import LazyBundle from "utils/LazyBundle";') ||
+                  (i === 0 &&
+                    !tmpStr.includes("import LazyBundle") &&
+                    'import LazyBundle from "utils/LazyBundle";') ||
                   ""
                 }
                 const ${
